@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { terminalContent } from "@/lib/data/hero"
+import { resumeLink } from "@/lib/data/contact"
+import { FileText } from "lucide-react"
 
 export function HeroSection() {
   const [visibleLines, setVisibleLines] = useState<number>(0)
@@ -59,7 +61,7 @@ export function HeroSection() {
               <div className="w-3 h-3 rounded-full bg-red-500/80" />
               <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
               <div className="w-3 h-3 rounded-full bg-green-500/80" />
-              <span className="ml-4 text-sm text-muted-foreground font-mono">terminal@portfolio:~</span>
+              <span className="ml-4 text-sm text-muted-foreground font-mono">terminal@personalportfolio:~</span>
             </div>
 
             {/* Terminal Content */}
@@ -116,10 +118,12 @@ export function HeroSection() {
               Contact Me
             </a>
             <a
-              href="#"
-              className="px-6 py-3 border border-border text-foreground rounded-lg font-medium hover:bg-secondary transition-colors"
+              href={resumeLink}
+              download="Poutama_CV.pdf"
+              className="px-8 py-3 border border-border text-foreground rounded-lg font-medium hover:bg-secondary transition-colors"
             >
               Download CV
+
             </a>
           </div>
         </motion.div>
