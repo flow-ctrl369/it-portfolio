@@ -1,41 +1,31 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Terminal } from "lucide-react"
+import { SectionWrapper } from "@/components/sections/SectionWrapper"
+import { SectionHeader } from "@/components/sections/SectionHeader"
+import { FeatureCard } from "@/components/cards/FeatureCard"
 import { skillCategories, softSkills } from "@/lib/data/skills"
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-24 px-4 bg-secondary/30">
+    <SectionWrapper id="skills" className="py-24 px-4 bg-secondary/30">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          {/* Section Header */}
-          <div className="flex items-center gap-3 mb-4">
-            <Terminal className="w-6 h-6 text-primary" />
-            <h2 className="text-3xl font-bold">
-              <span className="text-primary">$</span> skills --list --all
-            </h2>
-          </div>
-          <p className="text-muted-foreground mb-12 max-w-2xl">
-            Technical competencies developed through certifications, homelab projects, and hands-on learning.
-          </p>
+        <SectionHeader
+          title="skills --list --all"
+          description="Technical competencies developed through certifications, homelab projects, and hands-on learning."
+        />
 
-          {/* Skills Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {skillCategories.map((category, categoryIndex) => (
-              <motion.div
-                key={category.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: categoryIndex * 0.1 }}
-                className="glass rounded-xl p-6"
-              >
+        {/* Skills Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {skillCategories.map((category, categoryIndex) => (
+            <motion.div
+              key={category.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: categoryIndex * 0.1 }}
+            >
+              <FeatureCard>
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-2 rounded-lg bg-primary/10">
                     <category.icon className="w-5 h-5 text-primary" />
@@ -62,32 +52,32 @@ export function SkillsSection() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </FeatureCard>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Soft Skills */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h3 className="text-xl font-semibold mb-6 text-center">Transferable Skills from Hospitality</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {softSkills.map((skill) => (
+              <div
+                key={skill.name}
+                className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border"
+              >
+                <skill.icon className="w-4 h-4 text-primary" />
+                <span className="text-sm">{skill.name}</span>
+              </div>
             ))}
           </div>
-
-          {/* Soft Skills */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h3 className="text-xl font-semibold mb-6 text-center">Transferable Skills from Hospitality</h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              {softSkills.map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border"
-                >
-                  <skill.icon className="w-4 h-4 text-primary" />
-                  <span className="text-sm">{skill.name}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
         </motion.div>
       </div>
-    </section>
+    </SectionWrapper>
   )
 }

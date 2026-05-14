@@ -2,42 +2,31 @@
 
 import { motion } from "framer-motion"
 import { Terminal, Award, Clock } from "lucide-react"
+import { SectionWrapper } from "@/components/sections/SectionWrapper"
+import { SectionHeader } from "@/components/sections/SectionHeader"
+import { FeatureCard } from "@/components/cards/FeatureCard"
 import { certifications } from "@/lib/data/certifications"
 
 export function CertificationsSection() {
   return (
-    <section id="certifications" className="py-24 px-4 bg-secondary/30">
+    <SectionWrapper id="certifications" className="py-24 px-4 bg-secondary/30">
       <div className="max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          {/* Section Header */}
-          <div className="flex items-center gap-3 mb-4">
-            <Terminal className="w-6 h-6 text-primary" />
-            <h2 className="text-3xl font-bold">
-              <span className="text-primary">$</span> certifications --verified
-            </h2>
-          </div>
-          <p className="text-muted-foreground mb-12 max-w-2xl">
-            Industry-recognized certifications validating IT support and networking competencies.
-          </p>
+        <SectionHeader
+          title="certifications --verified"
+          description="Industry-recognized certifications validating IT support and networking competencies."
+        />
 
-          {/* Certifications Grid */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
-              <motion.div
-                key={cert.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className={`glass rounded-xl p-6 ${
-                  cert.status === "Studying" ? "opacity-75" : ""
-                }`}
-              >
+        {/* Certifications Grid */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={cert.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+            >
+              <FeatureCard className={cert.status === "Studying" ? "opacity-75" : ""}>
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="p-3 rounded-lg bg-primary/10">
@@ -78,11 +67,11 @@ export function CertificationsSection() {
                     </span>
                   ))}
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+              </FeatureCard>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </section>
+    </SectionWrapper>
   )
 }

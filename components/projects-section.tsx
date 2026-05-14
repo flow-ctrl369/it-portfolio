@@ -2,40 +2,31 @@
 
 import { motion } from "framer-motion"
 import { Terminal, Github, ExternalLink } from "lucide-react"
+import { SectionWrapper } from "@/components/sections/SectionWrapper"
+import { SectionHeader } from "@/components/sections/SectionHeader"
+import { FeatureCard } from "@/components/cards/FeatureCard"
 import { projects } from "@/lib/data/projects"
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-24 px-4">
+    <SectionWrapper id="projects" className="py-24 px-4">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          {/* Section Header */}
-          <div className="flex items-center gap-3 mb-4">
-            <Terminal className="w-6 h-6 text-primary" />
-            <h2 className="text-3xl font-bold">
-              <span className="text-primary">$</span> ls ~/projects
-            </h2>
-          </div>
-          <p className="text-muted-foreground mb-12 max-w-2xl">
-            Homelab projects demonstrating practical IT and networking skills through hands-on learning.
-          </p>
+        <SectionHeader
+          title="ls ~/projects"
+          description="Homelab projects demonstrating practical IT and networking skills through hands-on learning."
+        />
 
-          {/* Projects Grid */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="glass rounded-xl overflow-hidden group hover:border-primary/30 transition-colors"
-              >
+        {/* Projects Grid */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+            >
+              <FeatureCard hover className="overflow-hidden">
                 {/* Project Image Placeholder */}
                 <div className="h-48 bg-gradient-to-br from-secondary to-terminal-bg flex items-center justify-center border-b border-border">
                   <div className="text-center">
@@ -88,11 +79,11 @@ export function ProjectsSection() {
                     </a>
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+              </FeatureCard>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </section>
+    </SectionWrapper>
   )
 }
