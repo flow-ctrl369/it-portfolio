@@ -27,14 +27,28 @@ export function ProjectsSection() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
             >
               <FeatureCard hover className="overflow-hidden">
-                {/* Project Image Placeholder */}
-                <div className="h-48 bg-gradient-to-br from-secondary to-terminal-bg flex items-center justify-center border-b border-border">
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Terminal className="w-8 h-8 text-primary" />
+                {/* Project Video Preview */}
+                <div className="h-48 overflow-hidden bg-terminal-bg border-b border-border">
+                  {project.video ? (
+                    <video
+                      src={project.video}
+                      className="w-full h-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                    />
+                  ) : (
+                    <div className="h-48 bg-gradient-to-br from-secondary to-terminal-bg flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-16 h-16 mx-auto mb-3 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <Terminal className="w-8 h-8 text-primary" />
+                        </div>
+                        <span className="text-sm text-muted-foreground font-mono">project_{index + 1}</span>
+                      </div>
                     </div>
-                    <span className="text-sm text-muted-foreground font-mono">project_{index + 1}</span>
-                  </div>
+                  )}
                 </div>
 
                 {/* Project Content */}

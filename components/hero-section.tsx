@@ -57,11 +57,21 @@ export function HeroSection() {
         >
           <div className="rounded-lg overflow-hidden border border-terminal-border bg-terminal-bg shadow-2xl">
             {/* Terminal Header */}
-            <div className="flex items-center gap-2 px-4 py-3 bg-secondary/50 border-b border-terminal-border">
-              <div className="w-3 h-3 rounded-full bg-red-500/80" />
-              <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-              <div className="w-3 h-3 rounded-full bg-green-500/80" />
-              <span className="ml-4 text-sm text-muted-foreground font-mono">terminal@personalportfolio:~</span>
+            <div className="relative flex items-center px-4 py-3 bg-secondary/50 border-b border-terminal-border">
+              <div className="flex items-center gap-2">
+                <div className="group relative flex h-4 w-4 items-center justify-center rounded-full bg-[#ff605c] ring-1 ring-[#ff8d8a] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.12)]">
+                  <span className="text-[10px] font-bold text-transparent transition duration-200 group-hover:text-[#2f0203]">×</span>
+                </div>
+                <div className="group relative flex h-4 w-4 items-center justify-center rounded-full bg-[#ffbd2e] ring-1 ring-[#ffd97f] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.12)]">
+                  <span className="text-[10px] font-bold text-transparent transition duration-200 group-hover:text-[#3e2a03]">−</span>
+                </div>
+                <div className="group relative flex h-4 w-4 items-center justify-center rounded-full bg-[#28c840] ring-1 ring-[#8ef29d] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.12)]">
+                  <span className="text-[10px] font-bold text-transparent transition duration-200 group-hover:text-[#0f3d0f]">+</span>
+                </div>
+              </div>
+              <span className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-sm text-muted-foreground font-mono">
+                terminal@personalportfolio:~
+              </span>
             </div>
 
             {/* Terminal Content */}
