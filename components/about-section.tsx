@@ -32,10 +32,10 @@ export function AboutSection() {
             </p>
 
             <p>
-              My homelab has become my playground — running Pi-hole for DNS filtering,
+              My homelab has become my playground lately.. running Pi-hole for DNS filtering,
               experimenting with Docker containers, and building practical networking setups.
-              I&apos;m motivated to grow into <span className="text-terminal-cyan font-medium">systems administration</span> or{" "}
-              <span className="text-terminal-cyan font-medium">networking roles</span>, bringing both
+              I&apos;m keen to grow into a <span className="text-terminal-cyan font-medium">systems administration</span> or{" "}
+              <span className="text-terminal-cyan font-medium">networking role</span>, bringing both
               technical skills and a customer-first mindset to every challenge.
             </p>
           </div>

@@ -20,7 +20,7 @@ export function Footer() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Terminal className="w-5 h-5 text-primary" />
-                <span className="font-mono text-primary">portfolio@nz:~</span>
+                <span className="font-mono text-primary">poutama.mtech@gmail.com:~</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Aspiring IT Support & Networking Technician based in New Zealand. 

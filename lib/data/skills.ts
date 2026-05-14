@@ -24,7 +24,7 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Linux (Ubuntu/Debian)", level: 75 },
       { name: "Windows 10/11", level: 80 },
-      { name: "Windows Server", level: 45 },
+      { name: "Windows Server", level: 55 },
       { name: "Raspberry Pi OS", level: 85 },
     ],
   },
@@ -45,27 +45,27 @@ export const skillCategories: SkillCategory[] = [
       { name: "PC Building", level: 90 },
       { name: "Troubleshooting", level: 85 },
       { name: "Peripherals", level: 90 },
-      { name: "Mobile Devices", level: 75 },
+      { name: "Mobile Devices", level: 80 },
     ],
   },
   {
     title: "Linux & CLI",
     icon: Terminal,
     skills: [
-      { name: "Bash Scripting", level: 60 },
+      { name: "Bash Scripting", level: 65 },
       { name: "SSH Administration", level: 80 },
       { name: "Package Management", level: 75 },
-      { name: "File Systems", level: 70 },
+      { name: "File Systems", level: 80 },
     ],
   },
   {
     title: "Virtualization",
     icon: Server,
     skills: [
-      { name: "Docker", level: 65 },
+      { name: "Docker", level: 80 },
       { name: "VirtualBox", level: 75 },
-      { name: "VMware", level: 50 },
-      { name: "Containers", level: 60 },
+      { name: "VMware", level: 60 },
+      { name: "Containers", level: 75 },
     ],
   },
   {
@@ -75,7 +75,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Network Issues", level: 80 },
       { name: "Hardware Diagnosis", level: 85 },
       { name: "Software Problems", level: 85 },
-      { name: "Documentation", level: 75 },
+      { name: "Documentation", level: 80 },
     ],
   },
 ]
