@@ -95,11 +95,10 @@ export function HeroSection() {
           </div>
 
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-balance">
-            <span className="text-primary">IT Support</span> &{" "}
-            <span className="text-terminal-cyan">Networking</span>
+            <span className="text-primary">Poutama</span> <span className="text-terminal-cyan">(Pou)</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Aspiring Technician | CompTIA Certified | Based in New Zealand
+            29 · Auckland, New Zealand · IT Support & Networking Technician
           </p>
 
           {/* CTA Buttons */}

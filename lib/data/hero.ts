@@ -6,7 +6,7 @@ export type TerminalLine = {
 
 export const terminalContent: TerminalLine[] = [
   { type: "command", content: "$ whoami", delay: 0 },
-  { type: "output", content: "Aspiring IT Support & Networking Technician", delay: 800 },
+  { type: "output", content: "Poutama (Pou) — 29, Auckland, NZ", delay: 800 },
   { type: "command", content: "$ certifications --list", delay: 1600 },
   { type: "output", content: "CompTIA A+", delay: 2200 },
   { type: "output", content: "CompTIA Network+", delay: 2600 },
