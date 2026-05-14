@@ -70,7 +70,7 @@ export function HeroSection() {
                 </div>
               </div>
               <span className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-sm text-muted-foreground font-mono">
-                terminal@personalportfolio:~
+                terminal@portfolio:~
               </span>
             </div>
 
