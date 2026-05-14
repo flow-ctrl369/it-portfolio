@@ -8,8 +8,8 @@ export interface ContactLink {
   description: string
 }
 
-export const contactEmail = "hello@example.com"
-export const resumeLink = "#"
+export const contactEmail = "poutama.mtech@gmail.com"
+export const resumeLink = "/Poutama_CV.pdf"
 
 export const contactLinks: ContactLink[] = [
   {

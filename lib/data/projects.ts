@@ -32,7 +32,7 @@ export const projects: Project[] = [
     github: "#",
   },
   {
-    title: "Networking Practice Lab",
+    title: "Networking Sandbox Labs",
     description:
       "Virtual networking environment using VirtualBox for practicing subnetting, routing, and network troubleshooting. Simulates enterprise network scenarios.",
     technologies: ["VirtualBox", "pfSense", "Windows Server", "Wireshark"],

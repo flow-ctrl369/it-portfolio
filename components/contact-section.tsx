@@ -6,7 +6,7 @@ import { Send, FileText } from "lucide-react"
 import { SectionWrapper } from "@/components/sections/SectionWrapper"
 import { SectionHeader } from "@/components/sections/SectionHeader"
 import { GlassCard } from "@/components/cards/GlassCard"
-import { contactLinks, resumeLink } from "@/lib/data/contact"
+import { contactLinks, resumeLink, contactEmail } from "@/lib/data/contact"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -17,8 +17,13 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+
+    const subject = encodeURIComponent(`Portfolio contact from ${formData.name}`)
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    )
+
+    window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`
   }
 
   return (
@@ -138,6 +143,7 @@ export function ContactSection() {
               </p>
               <a
                 href={resumeLink}
+                download="Poutama_CV.pdf"
                 className="flex items-center justify-center gap-2 w-full px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary/10 transition-colors"
               >
                 <FileText className="w-4 h-4" />

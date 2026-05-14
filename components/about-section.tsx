@@ -16,29 +16,33 @@ export function AboutSection() {
         />
 
         <GlassCard>
-          <div className="space-y-6 text-lg leading-relaxed text-foreground/90">
+        <div className="space-y-6 text-lg leading-relaxed text-foreground/90">
             <p>
-              After years in the <span className="text-primary font-medium">hospitality industry</span>,
-              I developed strong communication skills, learned to thrive under pressure, and mastered
-              the art of customer service. These experiences taught me how to troubleshoot problems
-              on the fly and work effectively in fast-paced team environments.
+              Before I got into IT, I spent years in roles where things broke and people needed them
+              fixed fast —{" "}
+              <span className="text-primary font-medium">fire sprinkler systems</span>,{" "}
+              <span className="text-primary font-medium">irrigation infrastructure</span>, retail
+              troubleshooting at Hunting & Fishing NZ. Every job was essentially a support role: someone
+              has a problem, you diagnose it, you fix it, you explain what happened.
             </p>
 
             <p>
-              Now, I&apos;m channeling that same dedication into my <span className="text-terminal-cyan font-medium">transition to IT</span>.
-              Through hands-on learning and earning my <span className="text-primary font-medium">CompTIA A+</span> and{" "}
-              <span className="text-primary font-medium">Network+</span> certifications, I&apos;ve discovered
-              a genuine passion for troubleshooting, networking, and Linux systems.
+              That instinct is what pulled me toward IT support. I&apos;ve since completed the{" "}
+              <span className="text-terminal-cyan font-medium">CompTIA A+</span> and{" "}
+              <span className="text-terminal-cyan font-medium">Network+</span> exams and a Full Stack
+              Development certification, and built out a homelab running{" "}
+              <span className="text-primary font-medium">Pi-hole</span>,{" "}
+              <span className="text-primary font-medium">Docker</span>, and{" "}
+              <span className="text-primary font-medium">ESP32/Raspberry Pi projects</span>. Comfortable
+              across Linux, basic networking, and hardware.
             </p>
 
             <p>
-              My homelab has become my playground lately.. running Pi-hole for DNS filtering,
-              experimenting with Docker containers, and building practical networking setups.
-              I&apos;m keen to grow into a <span className="text-terminal-cyan font-medium">systems administration</span> or{" "}
-              <span className="text-terminal-cyan font-medium">networking role</span>, bringing both
-              technical skills and a customer-first mindset to every challenge.
+              I also use <span className="text-primary font-medium">AI tools</span>{" "} daily for
+              troubleshooting, learning, and building things faster. It&apos;s become a natural part of
+              how I work. I&apos;m the type to read the error message instead of skimming past it.
             </p>
-          </div>
+        </div>
 
           {/* Quick Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-border">

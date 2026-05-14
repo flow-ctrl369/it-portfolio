@@ -12,7 +12,7 @@ export const terminalContent: TerminalLine[] = [
   { type: "output", content: "CompTIA Network+", delay: 2600 },
   { type: "output", content: "Full Stack Web Development MRHQ", delay: 2800 },
   { type: "command", content: "$ skills --current", delay: 3400 },
-  { type: "output", content: "Linux | Networking | Troubleshooting | Raspberry Pi | Docker", delay: 4000 },
+  { type: "output", content: "Linux | Networking | Troubleshooting | Docker", delay: 4000 },
   { type: "output", content: "Pi-hole DNS | SSH | Bash | TCP/IP | DHCP | DNS", delay: 4400 },
   { type: "command", content: "$ learning --in-progress", delay: 5200 },
   { type: "output", content: "Active Directory | Wireshark | VLANs | Windows Server | Cybersecurity", delay: 5800 },
