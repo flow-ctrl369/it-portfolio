@@ -20,7 +20,7 @@ export const contactLinks: ContactLink[] = [
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/poutama-m/",
     icon: Linkedin,
     description: "Connect professionally",
   },
@@ -29,13 +29,13 @@ export const contactLinks: ContactLink[] = [
 export const socialLinks: ContactLink[] = [
   {
     name: "GitHub",
-    href: "https://github.com",
+    href: "https://github.com/flow-ctrl369",
     icon: Github,
     description: "View my projects",
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/poutama-m/",
     icon: Linkedin,
     description: "Connect professionally",
   },

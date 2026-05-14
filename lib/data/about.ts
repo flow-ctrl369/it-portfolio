@@ -4,8 +4,8 @@ export interface Stat {
 }
 
 export const aboutStats: Stat[] = [
-  { label: "Certifications", value: "2" },
-  { label: "Homelab Projects", value: "5+" },
+  { label: "Certifications", value: "3" },
+  { label: "Homelab Projects", value: "6+" },
   { label: "Technologies", value: "15+" },
-  { label: "Years Learning", value: "1+" },
+  { label: "Years Learning", value: "3+" },
 ]

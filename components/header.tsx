@@ -39,7 +39,7 @@ export function Header() {
         <a href="#" className="flex items-center gap-2 group">
           <Terminal className="w-5 h-5 text-primary" />
           <span className="font-mono text-sm text-primary group-hover:text-foreground transition-colors">
-            portfolio@nz:~
+            portfoliocheck@nz:~
           </span>
         </a>
 

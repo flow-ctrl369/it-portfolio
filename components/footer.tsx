@@ -20,10 +20,10 @@ export function Footer() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Terminal className="w-5 h-5 text-primary" />
-                <span className="font-mono text-primary">poutama.mtech@gmail.com:~</span>
+                <span className="font-mono text-primary">poutama.mtech@gmail.com</span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Aspiring IT Support & Networking Technician based in New Zealand. 
+                IT Support & Networking / Software Development Graduate based in New Zealand. 
                 Passionate about Linux, networking, and building practical solutions.
               </p>
             </div>
@@ -67,7 +67,7 @@ export function Footer() {
           {/* Bottom bar */}
           <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} IT Portfolio. All rights reserved.
+              © {new Date().getFullYear()} My Personal Portfolio. All rights reserved.
             </p>
             
             {/* Terminal status */}
