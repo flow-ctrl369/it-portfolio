@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Terminal, Mail, Linkedin, Github, Send, FileText } from "lucide-react"
+import { Terminal, Send, FileText } from "lucide-react"
+import { contactLinks, resumeLink } from "@/lib/data/contact"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -113,48 +114,26 @@ export function ContactSection() {
                 <h3 className="text-lg font-semibold mb-6">Connect with me</h3>
 
                 <div className="space-y-4">
-                  <a
-                    href="mailto:hello@example.com"
-                    className="flex items-center gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors group"
-                  >
-                    <div className="p-2 rounded-lg bg-primary/10">
-                      <Mail className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium group-hover:text-primary transition-colors">Email</div>
-                      <div className="text-sm text-muted-foreground">hello@example.com</div>
-                    </div>
-                  </a>
-
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors group"
-                  >
-                    <div className="p-2 rounded-lg bg-primary/10">
-                      <Linkedin className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium group-hover:text-primary transition-colors">LinkedIn</div>
-                      <div className="text-sm text-muted-foreground">Connect professionally</div>
-                    </div>
-                  </a>
-
-                  <a
-                    href="https://github.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors group"
-                  >
-                    <div className="p-2 rounded-lg bg-primary/10">
-                      <Github className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-medium group-hover:text-primary transition-colors">GitHub</div>
-                      <div className="text-sm text-muted-foreground">View my projects</div>
-                    </div>
-                  </a>
+                  {contactLinks.map((contact) => {
+                    const Icon = contact.icon
+                    return (
+                      <a
+                        key={contact.name}
+                        href={contact.href}
+                        target={contact.name !== "Email" ? "_blank" : undefined}
+                        rel={contact.name !== "Email" ? "noopener noreferrer" : undefined}
+                        className="flex items-center gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors group"
+                      >
+                        <div className="p-2 rounded-lg bg-primary/10">
+                          <Icon className="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                          <div className="font-medium group-hover:text-primary transition-colors">{contact.name}</div>
+                          <div className="text-sm text-muted-foreground">{contact.description}</div>
+                        </div>
+                      </a>
+                    )
+                  })}
                 </div>
               </div>
 
@@ -165,7 +144,7 @@ export function ContactSection() {
                   Get a comprehensive overview of my skills, certifications, and experience.
                 </p>
                 <a
-                  href="#"
+                  href={resumeLink}
                   className="flex items-center justify-center gap-2 w-full px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary/10 transition-colors"
                 >
                   <FileText className="w-4 h-4" />

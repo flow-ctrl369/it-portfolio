@@ -3,15 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Terminal, Menu, X } from "lucide-react"
-
-const navigation = [
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Certifications", href: "#certifications" },
-  { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
-]
+import { navItems } from "@/lib/data/navigation"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -42,7 +34,7 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1">
-          {navigation.map((item) => (
+          {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
@@ -73,7 +65,7 @@ export function Header() {
             className="md:hidden glass border-t border-border mt-3"
           >
             <nav className="flex flex-col p-4">
-              {navigation.map((item) => (
+              {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}

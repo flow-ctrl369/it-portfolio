@@ -1,22 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Terminal, Github, Linkedin, Mail } from "lucide-react"
-
-const navigation = [
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Certifications", href: "#certifications" },
-  { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
-]
-
-const socials = [
-  { name: "GitHub", href: "https://github.com", icon: Github },
-  { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
-  { name: "Email", href: "mailto:hello@example.com", icon: Mail },
-]
+import { Terminal } from "lucide-react"
+import { navItems } from "@/lib/data/navigation"
+import { socialLinks } from "@/lib/data/contact"
 
 export function Footer() {
   return (
@@ -45,7 +32,7 @@ export function Footer() {
             <div>
               <h4 className="font-semibold mb-4">Navigation</h4>
               <nav className="grid grid-cols-2 gap-2">
-                {navigation.map((item) => (
+                {navItems.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
@@ -61,7 +48,7 @@ export function Footer() {
             <div>
               <h4 className="font-semibold mb-4">Connect</h4>
               <div className="flex gap-3">
-                {socials.map((social) => (
+                {socialLinks.map((social) => (
                   <a
                     key={social.name}
                     href={social.href}
