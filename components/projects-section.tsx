@@ -28,11 +28,11 @@ export function ProjectsSection() {
             >
               <FeatureCard hover className="overflow-hidden">
                 {/* Project Video Preview */}
-                <div className="h-48 overflow-hidden bg-terminal-bg border-b border-border">
+                <div className="w-full aspect-video overflow-hidden bg-terminal-bg border-b border-border">
                   {project.video ? (
                     <video
                       src={project.video}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-center"
                       autoPlay
                       muted
                       loop
@@ -40,7 +40,7 @@ export function ProjectsSection() {
                       preload="metadata"
                     />
                   ) : (
-                    <div className="h-48 bg-gradient-to-br from-secondary to-terminal-bg flex items-center justify-center">
+                    <div className="w-full h-full bg-gradient-to-br from-secondary to-terminal-bg flex items-center justify-center">
                       <div className="text-center">
                         <div className="w-16 h-16 mx-auto mb-3 rounded-lg bg-primary/10 flex items-center justify-center">
                           <Terminal className="w-8 h-8 text-primary" />
