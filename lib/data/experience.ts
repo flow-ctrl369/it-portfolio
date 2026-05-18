@@ -27,16 +27,16 @@ export const experiences: Experience[] = [
         itApplication: "Cross-functional IT projects, knowledge sharing, documentation",
       },
       {
+        skill: "Time Management",
+        itApplication: "Ticket prioritization, SLA management, project deadlines",
+      },
+      {
         skill: "Conflict Resolution",
         itApplication: "Managing difficult support tickets, de-escalation, user satisfaction",
       },
       {
         skill: "Adaptability",
         itApplication: "Learning new technologies, adapting to changing IT environments",
-      },
-      {
-        skill: "Time Management",
-        itApplication: "Ticket prioritization, SLA management, project deadlines",
       },
     ],
   },

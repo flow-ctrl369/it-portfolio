@@ -7,9 +7,27 @@ __v0_jsx-dev-runtime.ts
 .vercel/
 
 # Environment variables
+.env
 .env*.local
 
-# Common ignores
-node_modules
+# Dependency directories
+node_modules/
+.pnpm-store/
+
+# Next.js build output
 .next/
+out/
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local editor files
+.vscode/
+.idea/
+
+# Misc
 .DS_Store
+package-lock.json

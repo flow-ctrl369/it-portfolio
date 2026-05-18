@@ -8,6 +8,14 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+    {
+    title: "Dockerized Next.js Portfolio",
+    description:
+      "This portfolio website, containerized with Docker for consistent deployment. Demonstrates modern web development practices alongside infrastructure skills.",
+    technologies: ["Docker", "Next.js", "TypeScript", "Tailwind CSS"],
+    skills: ["Containerization", "Web Development", "DevOps Basics"],
+    github: "#",
+  },
   {
     title: "Raspberry Pi Pi-hole DNS Server",
     description:
@@ -16,14 +24,6 @@ export const projects: Project[] = [
     skills: ["Network Administration", "DNS Configuration", "Linux CLI"],
     github: "#",
     // video: "/hand_gesture_mouse.mp4",
-  },
-  {
-    title: "Dockerized Next.js Portfolio",
-    description:
-      "This portfolio website, containerized with Docker for consistent deployment. Demonstrates modern web development practices alongside infrastructure skills.",
-    technologies: ["Docker", "Next.js", "TypeScript", "Tailwind CSS"],
-    skills: ["Containerization", "Web Development", "DevOps Basics"],
-    github: "#",
   },
   {
     title: "Linux Home Server",

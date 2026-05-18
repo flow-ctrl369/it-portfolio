@@ -129,7 +129,7 @@ export function HeroSection() {
             </a>
             <a
               href={resumeLink}
-              download="Poutama_CV.pdf"
+              download="poutama_cv.pdf"
               className="px-8 py-3 border border-border text-foreground rounded-lg font-medium hover:bg-secondary transition-colors"
             >
               Download CV

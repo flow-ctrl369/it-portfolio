@@ -26,6 +26,14 @@ export const certifications: Certification[] = [
       "Validates technical skills needed to design, configure, manage, and troubleshoot any wired and wireless network.",
     skills: ["Network Architecture", "Network Security", "Network Operations", "Troubleshooting", "Industry Standards"],
   },
+    {
+    name: "Full Stack Web Development Security+",
+    issuer: "MRHQNZ",
+    date: "Completed 2025",
+    status: "Certified",
+    description: "Validates core competency to an ability to perform full stack operations and following best practices in web development.",
+    skills: [ "TypeScript",  "Next.js", "Python", "Node.js", "Express", "MySQL", "Authentication", "Authorization",  "Security Best Practices" ],
+  }, 
   {
     name: "CompTIA Security+",
     issuer: "CompTIA",
@@ -33,13 +41,5 @@ export const certifications: Certification[] = [
     status: "Studying",
     description: "Validates core security skills necessary to perform core security functions and pursue an IT security career.",
     skills: ["Threats & Vulnerabilities", "Risk Management", "Cryptography", "Identity Management"],
-  },
-  {
-    name: "Full Stack Web Development Security+",
-    issuer: "MRHQNZ",
-    date: "Completed 2025",
-    status: "Certified",
-    description: "Validates core competency to an ability to perform full stack operations and following best practices in web development.",
-    skills: [ "TypeScript",  "Next.js", "Python", "Node.js", "Express", "MySQL", "Authentication", "Authorization",  "Security Best Practices" ],
-  },  
+  }, 
 ]
