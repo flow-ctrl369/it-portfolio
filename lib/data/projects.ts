@@ -15,7 +15,7 @@ export const projects: Project[] = [
     technologies: ["Raspberry Pi", "Pi-hole", "DNS", "DHCP", "Linux"],
     skills: ["Network Administration", "DNS Configuration", "Linux CLI"],
     github: "#",
-    video: "/hand_gesture_mouse.mp4",
+    // video: "/hand_gesture_mouse.mp4",
   },
   {
     title: "Dockerized Next.js Portfolio",
