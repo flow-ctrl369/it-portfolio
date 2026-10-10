@@ -3,15 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Terminal, Menu, X } from "lucide-react"
-
-const navigation = [
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Certifications", href: "#certifications" },
-  { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
-]
+import { navItems } from "@/lib/data/navigation"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -25,6 +17,17 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
+  }, [isMobileMenuOpen])
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -36,13 +39,13 @@ export function Header() {
         <a href="#" className="flex items-center gap-2 group">
           <Terminal className="w-5 h-5 text-primary" />
           <span className="font-mono text-sm text-primary group-hover:text-foreground transition-colors">
-            portfolio@nz:~
+            welcome@myportfolio:~
           </span>
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1">
-          {navigation.map((item) => (
+          {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
@@ -64,16 +67,17 @@ export function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass border-t border-border mt-3"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden glass border-t border-border mt-3 overflow-hidden"
           >
             <nav className="flex flex-col p-4">
-              {navigation.map((item) => (
+              {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
