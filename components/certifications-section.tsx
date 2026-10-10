@@ -5,30 +5,21 @@ import { Terminal, Award, Clock } from "lucide-react"
 
 const certifications = [
   {
-    name: "CompTIA A+",
-    issuer: "CompTIA",
-    date: "2024",
-    status: "Certified",
-    description:
-      "Foundation-level certification covering hardware, software, networking, and troubleshooting fundamentals.",
-    skills: ["Hardware", "Software Troubleshooting", "Networking Basics", "Security", "Operational Procedures"],
-  },
-  {
     name: "CompTIA Network+",
     issuer: "CompTIA",
-    date: "2024",
-    status: "Certified",
+    date: "Passed",
+    status: "Passed",
     description:
       "Validates technical skills needed to design, configure, manage, and troubleshoot any wired and wireless network.",
     skills: ["Network Architecture", "Network Security", "Network Operations", "Troubleshooting", "Industry Standards"],
   },
   {
-    name: "CompTIA Security+",
-    issuer: "CompTIA",
+    name: "Cisco CCNA",
+    issuer: "Cisco",
     date: "In Progress",
     status: "Studying",
-    description: "Validates core security skills necessary to perform core security functions and pursue an IT security career.",
-    skills: ["Threats & Vulnerabilities", "Risk Management", "Cryptography", "Identity Management"],
+    description: "Currently studying toward the Cisco Certified Network Associate certification, building deeper networking and infrastructure expertise.",
+    skills: ["Network Fundamentals", "IP Connectivity", "Network Access", "IP Services"],
   },
 ]
 
@@ -73,7 +64,7 @@ export function CertificationsSection() {
                   </div>
                   <span
                     className={`px-3 py-1 text-xs font-medium rounded-full ${
-                      cert.status === "Certified"
+                      cert.status === "Passed"
                         ? "bg-primary/20 text-primary"
                         : "bg-terminal-yellow/20 text-terminal-yellow"
                     }`}

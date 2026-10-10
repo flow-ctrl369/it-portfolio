@@ -8,7 +8,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'IT Support & Networking Technician Portfolio',
-  description: 'Aspiring IT Support & Networking Technician with CompTIA A+ and Network+ certifications. Passionate about Linux, networking, and homelab projects.',
+  description: 'IT Support & Networking Technician with CompTIA Network+ passed and currently studying toward the Cisco CCNA. Passionate about Linux, networking, and homelab projects.',
   generator: 'v0.app',
   icons: {
     icon: [

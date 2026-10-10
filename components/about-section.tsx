@@ -33,8 +33,7 @@ export function AboutSection() {
               
               <p>
                 Now, I&apos;m channeling that same dedication into my <span className="text-terminal-cyan font-medium">transition to IT</span>. 
-                Through hands-on learning and earning my <span className="text-primary font-medium">CompTIA A+</span> and{" "}
-                <span className="text-primary font-medium">Network+</span> certifications, I&apos;ve discovered 
+Through hands-on learning and passing my <span className="text-primary font-medium">CompTIA Network+</span> certification, while studying toward the <span className="text-primary font-medium">Cisco CCNA</span>, I&apos;ve discovered
                 a genuine passion for troubleshooting, networking, and Linux systems.
               </p>
               
