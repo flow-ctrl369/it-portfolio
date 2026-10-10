@@ -2,9 +2,25 @@
 
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { terminalContent } from "@/lib/data/hero"
-import { resumeLink } from "@/lib/data/contact"
-import { FileText } from "lucide-react"
+
+interface TerminalLine {
+  type: "command" | "output"
+  content: string
+  delay: number
+}
+
+const terminalContent: TerminalLine[] = [
+  { type: "command", content: "$ whoami", delay: 0 },
+  { type: "output", content: "Aspiring IT Support & Networking Technician", delay: 800 },
+  { type: "command", content: "$ certifications --list", delay: 1600 },
+  { type: "output", content: "CompTIA Network+ — Passed", delay: 2200 },
+  { type: "output", content: "Cisco CCNA — Studying", delay: 2600 },
+  { type: "command", content: "$ skills --current", delay: 3400 },
+  { type: "output", content: "Linux | Networking | Troubleshooting | Raspberry Pi | Docker", delay: 4000 },
+  { type: "output", content: "Pi-hole DNS | SSH | Bash | TCP/IP | DHCP | DNS", delay: 4400 },
+  { type: "command", content: "$ learning --in-progress", delay: 5200 },
+  { type: "output", content: "Active Directory | Wireshark | VLANs | Windows Server | Cybersecurity", delay: 5800 },
+]
 
 export function HeroSection() {
   const [visibleLines, setVisibleLines] = useState<number>(0)
@@ -57,21 +73,11 @@ export function HeroSection() {
         >
           <div className="rounded-lg overflow-hidden border border-terminal-border bg-terminal-bg shadow-2xl">
             {/* Terminal Header */}
-            <div className="relative flex items-center px-4 py-3 bg-secondary/50 border-b border-terminal-border">
-              <div className="flex items-center gap-2">
-                <div className="group relative flex h-4 w-4 items-center justify-center rounded-full bg-[#ff605c] ring-1 ring-[#ff8d8a] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.12)]">
-                  <span className="text-[10px] font-bold text-transparent transition duration-200 group-hover:text-[#2f0203]">×</span>
-                </div>
-                <div className="group relative flex h-4 w-4 items-center justify-center rounded-full bg-[#ffbd2e] ring-1 ring-[#ffd97f] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.12)]">
-                  <span className="text-[10px] font-bold text-transparent transition duration-200 group-hover:text-[#3e2a03]">−</span>
-                </div>
-                <div className="group relative flex h-4 w-4 items-center justify-center rounded-full bg-[#28c840] ring-1 ring-[#8ef29d] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.12)]">
-                  <span className="text-[10px] font-bold text-transparent transition duration-200 group-hover:text-[#0f3d0f]">+</span>
-                </div>
-              </div>
-              <span className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-sm text-muted-foreground font-mono">
-                terminal@portfolio:~
-              </span>
+            <div className="flex items-center gap-2 px-4 py-3 bg-secondary/50 border-b border-terminal-border">
+              <div className="w-3 h-3 rounded-full bg-red-500/80" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+              <div className="w-3 h-3 rounded-full bg-green-500/80" />
+              <span className="ml-4 text-sm text-muted-foreground font-mono">terminal@portfolio:~</span>
             </div>
 
             {/* Terminal Content */}
@@ -107,10 +113,11 @@ export function HeroSection() {
           </div>
 
           <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-balance">
-            <span className="text-primary">Poutama</span> <span className="text-terminal-cyan">(Pou)</span>
+            <span className="text-primary">IT Support</span> &{" "}
+            <span className="text-terminal-cyan">Networking</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            29 · Auckland, New Zealand · IT Support & Networking Technician
+            Aspiring Technician | CompTIA Certified | Based in New Zealand
           </p>
 
           {/* CTA Buttons */}
@@ -128,12 +135,10 @@ export function HeroSection() {
               Contact Me
             </a>
             <a
-              href={resumeLink}
-              download="poutama_cv.pdf"
-              className="px-8 py-3 border border-border text-foreground rounded-lg font-medium hover:bg-secondary transition-colors"
+              href="#"
+              className="px-6 py-3 border border-border text-foreground rounded-lg font-medium hover:bg-secondary transition-colors"
             >
               Download CV
-
             </a>
           </div>
         </motion.div>
